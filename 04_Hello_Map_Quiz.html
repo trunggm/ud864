@@ -30,6 +30,16 @@ API Course, Lesson 1 -->
               map: map,
               title: 'First Marker'
           });
+
+          // create a infor window
+          var infowindow = new google.maps.InfoWindow({
+            content: "hello every body, I am giang minh trung, I am here!"
+          });
+
+          // add event
+          marker.addListener('click', function () {
+            infowindow.open(map, marker);
+          });
        }
    </script>
    <!--TODO: Load the JS API ASYNCHRONOUSLY below.-->
